@@ -109,6 +109,7 @@
 		8704BC402AF6564C0055F8FC /* GameListApp */ = {
 			isa = PBXGroup;
 			children = (
+				87C2C7232AF67ED600EB9628 /* Network */,
 				8704BC7B2AF65E0C0055F8FC /* Modules */,
 				8704BC742AF65B2B0055F8FC /* GameListRouter */,
 				8704BC772AF65BB10055F8FC /* Common */,
@@ -188,6 +189,13 @@
 				87C2C7212AF66B2100EB9628 /* GameListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		87C2C7232AF67ED600EB9628 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +389,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BASE_URL = "https://api.rawg.io/api/games";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -444,6 +453,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BASE_URL = "https://api.rawg.io/api/games";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
