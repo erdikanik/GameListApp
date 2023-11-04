@@ -26,6 +26,7 @@
 		87C2C72F2AF6951F00EB9628 /* GameListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C72E2AF6951F00EB9628 /* GameListRequest.swift */; };
 		87C2C7312AF696E700EB9628 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7302AF696E700EB9628 /* Game.swift */; };
 		87C2C7342AF6990300EB9628 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7332AF6990300EB9628 /* Genre.swift */; };
+		87C2C7362AF69AEA00EB9628 /* GameListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7352AF69AEA00EB9628 /* GameListResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		87C2C72E2AF6951F00EB9628 /* GameListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListRequest.swift; sourceTree = "<group>"; };
 		87C2C7302AF696E700EB9628 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		87C2C7332AF6990300EB9628 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		87C2C7352AF69AEA00EB9628 /* GameListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 		87C2C7282AF688BD00EB9628 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				87C2C7352AF69AEA00EB9628 /* GameListResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				8704BC792AF65BCF0055F8FC /* ViewConstants.swift in Sources */,
 				8704BC7F2AF663200055F8FC /* GameListDashboardViewController.swift in Sources */,
 				87C2C7252AF6855300EB9628 /* NetworkConfiguration.swift in Sources */,
+				87C2C7362AF69AEA00EB9628 /* GameListResponse.swift in Sources */,
 				87C2C71F2AF6678E00EB9628 /* GameListTabbarController.swift in Sources */,
 				87C2C7312AF696E700EB9628 /* Game.swift in Sources */,
 				87C2C7222AF66B2100EB9628 /* GameListViewModel.swift in Sources */,

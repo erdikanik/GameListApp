@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Game {
-    
+struct Game: Decodable {
+
     private enum CodingKeys: String, CodingKey {
 
         case name
