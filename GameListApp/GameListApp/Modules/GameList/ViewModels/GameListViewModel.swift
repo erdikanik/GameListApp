@@ -9,10 +9,28 @@ import Foundation
 
 protocol GameListViewModelInterface {
 
-    // TODO: Will be implemented
+    /// State change handler
+    var stateChangeHandler: ((GameListViewModel.State) -> Void)? { get set }
+
+    /// Request initial games
+    func fetchInitialGames()
 }
 
-final class GameListViewModel: GameListViewModelInterface {
+final class GameListViewModel {
+    
+    enum State {
 
-    // TODO: Will be implemented
+        case initialGamesFetched([Game])
+    }
+
+    var stateChangeHandler: ((State) -> Void)?
+}
+
+// MARK: GameListViewModelInterface
+
+extension GameListViewModel: GameListViewModelInterface {
+
+    func fetchInitialGames() {
+        // TODO: Will be implemented
+    }
 }
