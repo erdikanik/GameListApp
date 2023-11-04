@@ -16,6 +16,8 @@ final class GameListDashboardViewController: UIViewController {
     /// Manage logic operations
     var gameListViewModel: GameListViewModel?
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

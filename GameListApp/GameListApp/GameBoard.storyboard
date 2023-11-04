@@ -32,10 +32,32 @@
                     <view key="view" contentMode="scaleToFill" id="5Qd-ma-c98">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cfE-pC-5Kj">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3gB-SN-KPA">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fq4-TE-Vng"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cfE-pC-5Kj" firstAttribute="top" secondItem="fq4-TE-Vng" secondAttribute="top" id="2Pe-XD-MLu"/>
+                            <constraint firstItem="fq4-TE-Vng" firstAttribute="trailing" secondItem="cfE-pC-5Kj" secondAttribute="trailing" id="HW3-CA-3T8"/>
+                            <constraint firstItem="fq4-TE-Vng" firstAttribute="bottom" secondItem="cfE-pC-5Kj" secondAttribute="bottom" id="RY3-z8-UHs"/>
+                            <constraint firstItem="cfE-pC-5Kj" firstAttribute="leading" secondItem="fq4-TE-Vng" secondAttribute="leading" id="Z4k-8p-YXD"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="SlG-B4-yel"/>
+                    <connections>
+                        <outlet property="collectionView" destination="cfE-pC-5Kj" id="b68-BZ-y65"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KtX-I9-PDG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
