@@ -24,11 +24,12 @@ final class GameListRouter: GameListRoutable {
     }
 
     func startRouting() {
-        guard let gameListDashboardViewController = 
-                tabbarController.viewControllers?.first as? GameListDashboardViewController else {
+        guard let navigationController = tabbarController.viewControllers?.first as? UINavigationController,
+              let gameListDashboardViewController = 
+                navigationController.topViewController as? GameListDashboardViewController else {
+
             return
         }
-
         gameListDashboardViewController.gameListRouter = self
         
         let viewModel = GameListViewModel()
