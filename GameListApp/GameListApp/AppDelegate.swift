@@ -20,14 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         guard let tabbarController = storyboard.instantiateViewController(
             withIdentifier: ViewConstants.TabbarControllers.gameListTabbarController.rawValue
-        ) as? UITabBarController,
-              let gameListViewController = tabbarController.viewControllers?.first as? GameListDashboardViewController else {
+        ) as? UITabBarController else {
             return false
         }
 
-        gameListViewController.gameListRouter = router
-        window = UIWindow(frame: UIScreen.main.bounds)
+        router = GameListRouter(tabbarController: tabbarController)
+        router.startRouting()
 
+        window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabbarController
         window?.makeKeyAndVisible()
 

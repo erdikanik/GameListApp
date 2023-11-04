@@ -10,7 +10,11 @@ import UIKit
 
 final class GameListDashboardViewController: UIViewController {
 
+    /// Manage route operations
     weak var gameListRouter: GameListRoutable?
+
+    /// Manage logic operations
+    var gameListViewModel: GameListViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
