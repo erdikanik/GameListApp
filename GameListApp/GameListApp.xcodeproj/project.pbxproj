@@ -19,6 +19,7 @@
 		8704BC762AF65B420055F8FC /* GameListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8704BC752AF65B420055F8FC /* GameListRouter.swift */; };
 		8704BC792AF65BCF0055F8FC /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8704BC782AF65BCF0055F8FC /* ViewConstants.swift */; };
 		8704BC7F2AF663200055F8FC /* GameListDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8704BC7E2AF663200055F8FC /* GameListDashboardViewController.swift */; };
+		87C2C71F2AF6678E00EB9628 /* GameListTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C71E2AF6678E00EB9628 /* GameListTabbarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		8704BC752AF65B420055F8FC /* GameListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListRouter.swift; sourceTree = "<group>"; };
 		8704BC782AF65BCF0055F8FC /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		8704BC7E2AF663200055F8FC /* GameListDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListDashboardViewController.swift; sourceTree = "<group>"; };
+		87C2C71E2AF6678E00EB9628 /* GameListTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListTabbarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				8704BC7C2AF65E150055F8FC /* GameList */,
+				87C2C71E2AF6678E00EB9628 /* GameListTabbarController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			files = (
 				8704BC792AF65BCF0055F8FC /* ViewConstants.swift in Sources */,
 				8704BC7F2AF663200055F8FC /* GameListDashboardViewController.swift in Sources */,
+				87C2C71F2AF6678E00EB9628 /* GameListTabbarController.swift in Sources */,
 				8704BC462AF6564C0055F8FC /* ViewController.swift in Sources */,
 				8704BC422AF6564C0055F8FC /* AppDelegate.swift in Sources */,
 				8704BC762AF65B420055F8FC /* GameListRouter.swift in Sources */,

@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="517" y="-1063"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Game List Tabbar Controller-->
         <scene sceneID="FNT-wZ-sdX">
             <objects>
-                <tabBarController storyboardIdentifier="gameListTabbarController" id="fjq-Jv-tLs" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="gameListTabbarController" id="fjq-Jv-tLs" customClass="GameListTabbarController" customModule="GameListApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q8e-Cp-zBs">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
