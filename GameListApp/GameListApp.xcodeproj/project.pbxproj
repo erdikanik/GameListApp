@@ -28,6 +28,8 @@
 		87C2C7342AF6990300EB9628 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7332AF6990300EB9628 /* Genre.swift */; };
 		87C2C7362AF69AEA00EB9628 /* GameListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7352AF69AEA00EB9628 /* GameListResponse.swift */; };
 		87C2C73C2AF6D41800EB9628 /* UIViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C73B2AF6D41800EB9628 /* UIViewAdditions.swift */; };
+		87C2C7402AF6D50700EB9628 /* GameGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C73F2AF6D50700EB9628 /* GameGridCell.swift */; };
+		87C2C7422AF6D5A200EB9628 /* GameGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87C2C7412AF6D5A200EB9628 /* GameGridCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		87C2C7332AF6990300EB9628 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		87C2C7352AF69AEA00EB9628 /* GameListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListResponse.swift; sourceTree = "<group>"; };
 		87C2C73B2AF6D41800EB9628 /* UIViewAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAdditions.swift; sourceTree = "<group>"; };
+		87C2C73F2AF6D50700EB9628 /* GameGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridCell.swift; sourceTree = "<group>"; };
+		87C2C7412AF6D5A200EB9628 /* GameGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameGridCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		8704BC402AF6564C0055F8FC /* GameListApp */ = {
 			isa = PBXGroup;
 			children = (
+				87C2C73D2AF6D4EA00EB9628 /* Reusables */,
 				87C2C73A2AF6D40B00EB9628 /* Extensions */,
 				87C2C7232AF67ED600EB9628 /* Network */,
 				8704BC7B2AF65E0C0055F8FC /* Modules */,
@@ -251,6 +256,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		87C2C73D2AF6D4EA00EB9628 /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				87C2C73E2AF6D4F400EB9628 /* Cells */,
+			);
+			path = Reusables;
+			sourceTree = "<group>";
+		};
+		87C2C73E2AF6D4F400EB9628 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				87C2C73F2AF6D50700EB9628 /* GameGridCell.swift */,
+				87C2C7412AF6D5A200EB9628 /* GameGridCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -356,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8704BC732AF65A800055F8FC /* GameBoard.storyboard in Resources */,
+				87C2C7422AF6D5A200EB9628 /* GameGridCell.xib in Resources */,
 				8704BC4E2AF6564D0055F8FC /* LaunchScreen.storyboard in Resources */,
 				8704BC4B2AF6564D0055F8FC /* Assets.xcassets in Resources */,
 			);
@@ -395,6 +418,7 @@
 				87C2C7222AF66B2100EB9628 /* GameListViewModel.swift in Sources */,
 				87C2C7342AF6990300EB9628 /* Genre.swift in Sources */,
 				8704BC422AF6564C0055F8FC /* AppDelegate.swift in Sources */,
+				87C2C7402AF6D50700EB9628 /* GameGridCell.swift in Sources */,
 				8704BC762AF65B420055F8FC /* GameListRouter.swift in Sources */,
 				8704BC442AF6564C0055F8FC /* SceneDelegate.swift in Sources */,
 			);

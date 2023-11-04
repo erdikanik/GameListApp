@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OG7-ZG-fMo" customClass="GameGridCell" customModule="GameListApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="270" height="307"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wl8-hP-l8w">
+                <rect key="frame" x="0.0" y="0.0" width="270" height="307"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1xz-3E-gTf">
+                        <rect key="frame" x="0.0" y="25" width="270" height="114"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JfF-aK-1Hc">
+                        <rect key="frame" x="0.0" y="147" width="270" height="150"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2x2-hi-lXO">
+                                <rect key="frame" x="0.0" y="0.0" width="270" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15Y-1N-Z96">
+                                <rect key="frame" x="0.0" y="50" width="270" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlT-fF-IYG">
+                                <rect key="frame" x="0.0" y="100" width="270" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1xz-3E-gTf" firstAttribute="leading" secondItem="wl8-hP-l8w" secondAttribute="leading" id="8Tf-Ni-Eqz"/>
+                    <constraint firstItem="JfF-aK-1Hc" firstAttribute="top" secondItem="1xz-3E-gTf" secondAttribute="bottom" constant="8" symbolic="YES" id="CHC-wJ-nix"/>
+                    <constraint firstAttribute="trailing" secondItem="1xz-3E-gTf" secondAttribute="trailing" id="QjA-J1-0dw"/>
+                    <constraint firstAttribute="trailing" secondItem="JfF-aK-1Hc" secondAttribute="trailing" id="dAC-Nf-lIf"/>
+                    <constraint firstItem="JfF-aK-1Hc" firstAttribute="leading" secondItem="wl8-hP-l8w" secondAttribute="leading" id="eW8-85-khJ"/>
+                    <constraint firstAttribute="bottom" secondItem="JfF-aK-1Hc" secondAttribute="bottom" constant="10" id="gH1-oe-n7w"/>
+                    <constraint firstItem="1xz-3E-gTf" firstAttribute="top" secondItem="wl8-hP-l8w" secondAttribute="top" constant="25" id="qTy-R1-CHH"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="270" height="307"/>
+            <connections>
+                <outlet property="gameImageView" destination="1xz-3E-gTf" id="0dH-2u-kzj"/>
+                <outlet property="genresLabel" destination="15Y-1N-Z96" id="qNM-My-v6j"/>
+                <outlet property="nameLabel" destination="2x2-hi-lXO" id="tmR-Pv-HGm"/>
+                <outlet property="ratingLabel" destination="VlT-fF-IYG" id="jhD-TZ-LRZ"/>
+            </connections>
+            <point key="canvasLocation" x="-728.24427480916029" y="17.253521126760564"/>
+        </collectionViewCell>
+    </objects>
+</document>
