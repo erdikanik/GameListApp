@@ -21,6 +21,11 @@
 		87C2C71F2AF6678E00EB9628 /* GameListTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C71E2AF6678E00EB9628 /* GameListTabbarController.swift */; };
 		87C2C7222AF66B2100EB9628 /* GameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7212AF66B2100EB9628 /* GameListViewModel.swift */; };
 		87C2C7252AF6855300EB9628 /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7242AF6855300EB9628 /* NetworkConfiguration.swift */; };
+		87C2C72B2AF68C5000EB9628 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C72A2AF68C5000EB9628 /* NetworkManager.swift */; };
+		87C2C72D2AF6907300EB9628 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C72C2AF6907300EB9628 /* BaseRequest.swift */; };
+		87C2C72F2AF6951F00EB9628 /* GameListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C72E2AF6951F00EB9628 /* GameListRequest.swift */; };
+		87C2C7312AF696E700EB9628 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7302AF696E700EB9628 /* Game.swift */; };
+		87C2C7342AF6990300EB9628 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7332AF6990300EB9628 /* Genre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		87C2C71E2AF6678E00EB9628 /* GameListTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListTabbarController.swift; sourceTree = "<group>"; };
 		87C2C7212AF66B2100EB9628 /* GameListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewModel.swift; sourceTree = "<group>"; };
 		87C2C7242AF6855300EB9628 /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
+		87C2C72A2AF68C5000EB9628 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		87C2C72C2AF6907300EB9628 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		87C2C72E2AF6951F00EB9628 /* GameListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListRequest.swift; sourceTree = "<group>"; };
+		87C2C7302AF696E700EB9628 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		87C2C7332AF6990300EB9628 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +207,7 @@
 				87C2C7282AF688BD00EB9628 /* Response */,
 				87C2C7272AF688B600EB9628 /* Request */,
 				87C2C7242AF6855300EB9628 /* NetworkConfiguration.swift */,
+				87C2C72A2AF68C5000EB9628 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -204,6 +215,8 @@
 		87C2C7272AF688B600EB9628 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				87C2C72C2AF6907300EB9628 /* BaseRequest.swift */,
+				87C2C72E2AF6951F00EB9628 /* GameListRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -218,6 +231,8 @@
 		87C2C7292AF688C500EB9628 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				87C2C7302AF696E700EB9628 /* Game.swift */,
+				87C2C7332AF6990300EB9628 /* Genre.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -353,11 +368,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87C2C72D2AF6907300EB9628 /* BaseRequest.swift in Sources */,
+				87C2C72F2AF6951F00EB9628 /* GameListRequest.swift in Sources */,
+				87C2C72B2AF68C5000EB9628 /* NetworkManager.swift in Sources */,
 				8704BC792AF65BCF0055F8FC /* ViewConstants.swift in Sources */,
 				8704BC7F2AF663200055F8FC /* GameListDashboardViewController.swift in Sources */,
 				87C2C7252AF6855300EB9628 /* NetworkConfiguration.swift in Sources */,
 				87C2C71F2AF6678E00EB9628 /* GameListTabbarController.swift in Sources */,
+				87C2C7312AF696E700EB9628 /* Game.swift in Sources */,
 				87C2C7222AF66B2100EB9628 /* GameListViewModel.swift in Sources */,
+				87C2C7342AF6990300EB9628 /* Genre.swift in Sources */,
 				8704BC422AF6564C0055F8FC /* AppDelegate.swift in Sources */,
 				8704BC762AF65B420055F8FC /* GameListRouter.swift in Sources */,
 				8704BC442AF6564C0055F8FC /* SceneDelegate.swift in Sources */,

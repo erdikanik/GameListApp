@@ -13,14 +13,21 @@ enum NetworkConfiguration {
 
     enum NetworkUrls {
 
-        static let dashboard = "?page_size=10&page=1"
+        case dashboard
+        case search
+        case detail
 
-        func baseUrl() -> String {
+        func getUrl() -> String {
             guard let baseUrl = Bundle.main.infoDictionary?["BASE_URL"] as? String else {
                 return ""
             }
 
-            return baseUrl
+            switch self {
+            case .dashboard, .search:
+                return baseUrl + "?page_size=10&page=1"
+            case .detail:
+                return baseUrl
+            }
         }
     }
 }
