@@ -21,9 +21,17 @@ final class GameListViewModel {
     enum State {
 
         case initialGamesFetched([Game])
+        case error(String)
     }
 
+    private let networkManager: NetworkManagerProtocol!
     var stateChangeHandler: ((State) -> Void)?
+
+    private let currentPage = 1;
+
+    init(networkManager: NetworkManagerProtocol) {
+        self.networkManager = networkManager
+    }
 }
 
 // MARK: GameListViewModelInterface
@@ -31,6 +39,15 @@ final class GameListViewModel {
 extension GameListViewModel: GameListViewModelInterface {
 
     func fetchInitialGames() {
-        // TODO: Will be implemented
+        let request = GameListRequest()
+        request.page = currentPage
+        networkManager.performRequest(request: request) { [weak self] (result: Result<GameListResponse>) in
+            switch result {
+            case .error(let error):
+                self?.stateChangeHandler?(.error(error.localizedDescription))
+            case .success(let response):
+                self?.stateChangeHandler?(.initialGamesFetched(response.results ?? []))
+            }
+        }
     }
 }

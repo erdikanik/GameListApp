@@ -14,6 +14,7 @@ enum Result<T> {
 
 protocol NetworkManagerProtocol {
 
+    @discardableResult
     func performRequest<T: Decodable>(request: BaseRequest, completion: @escaping (Result<T>) -> Void) -> URLSessionTask?
 }
 

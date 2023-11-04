@@ -18,6 +18,7 @@ protocol GameListRoutable: AnyObject {
 final class GameListRouter: GameListRoutable {
 
     private let tabbarController: UITabBarController
+    private let networkManager = NetworkManager()
 
     init(tabbarController: UITabBarController) {
         self.tabbarController = tabbarController
@@ -32,7 +33,7 @@ final class GameListRouter: GameListRoutable {
         }
         gameListDashboardViewController.gameListRouter = self
         
-        let viewModel = GameListViewModel()
+        let viewModel = GameListViewModel(networkManager: networkManager)
         gameListDashboardViewController.gameListViewModel = viewModel
     }
 }

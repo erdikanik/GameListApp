@@ -18,9 +18,22 @@ final class GameListDashboardViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private var games: [Game] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // TODO: Will be implemented
+        gameListViewModel?.stateChangeHandler = { [weak self] state in
+
+            switch state {
+            case .initialGamesFetched(let games):
+                self?.games = games
+            case .error(_):
+                // TODO: Will be implemented
+                break
+            }
+        }
+
+        gameListViewModel?.fetchInitialGames()
     }
 }
