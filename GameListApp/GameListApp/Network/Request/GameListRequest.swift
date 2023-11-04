@@ -14,7 +14,7 @@ final class GameListRequest: BaseRequest {
         static let page = "page"
     }
 
-    var page: Int = 1
+    var page = 1
 
     override var path: String {
         NetworkConfiguration.NetworkUrls.dashboard.getUrl()

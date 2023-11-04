@@ -15,6 +15,6 @@ struct Genre: Decodable {
         case name
     }
 
-    let genreId: String
+    let genreId: Int
     var name: String?
 }
