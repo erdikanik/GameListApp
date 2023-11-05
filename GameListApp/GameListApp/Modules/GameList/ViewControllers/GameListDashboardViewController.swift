@@ -25,8 +25,12 @@ final class GameListDashboardViewController: UIViewController {
     
     private var games: [Game] = []
 
+    let searchController = UISearchController(searchResultsController: nil)
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        applySearchControllerSettings()
 
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -61,6 +65,17 @@ final class GameListDashboardViewController: UIViewController {
     }
 
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+    }
+}
+
+private extension GameListDashboardViewController {
+
+    func applySearchControllerSettings() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = NSLocalizedString("Game", comment: "")
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
 }
 
@@ -130,5 +145,20 @@ extension GameListDashboardViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return Constant.sectionInsets.left
+    }
+}
+
+// MARK: UISearchResultsUpdating
+
+extension GameListDashboardViewController: UISearchResultsUpdating {
+
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        if searchBar.text == nil || searchBar.text?.count == 0 {
+
+        } else {
+            if let text = searchBar.text {
+            }
+        }
     }
 }
