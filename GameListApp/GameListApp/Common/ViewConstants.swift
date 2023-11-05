@@ -22,5 +22,6 @@ enum ViewConstants {
     enum ViewControllers: String {
 
         case gameListDashboardViewController
+        case gameListDetailViewController
     }
 }

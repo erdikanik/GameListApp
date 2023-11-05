@@ -6,10 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
-final class GameListDetailViewController {
+final class GameListDetailViewController: UIViewController {
 
-    var router: GameListRouter?
-
-    // TODO: Will be implemented
+    weak var router: GameListRouter?
+    var viewModel: GameListDetailViewModelInterface?
 }

@@ -10,7 +10,7 @@ import Foundation
 protocol GameListDetailViewModelInterface {
     
     /// State change handler
-    var stateChangeHandler: ((GameListViewModel.State) -> Void)? { get set }
+    var stateChangeHandler: ((GameListDetailViewModel.State) -> Void)? { get set }
 
     /// Retrieves game details
     func retrieveGameDetails()
@@ -30,6 +30,8 @@ final class GameListDetailViewModel {
         case error(String)
     }
 
+    var stateChangeHandler: ((State) -> Void)?
+
     private let networkManager: NetworkManagerProtocol
     private let dataSource: GameListDataSource
     private let selectedGame: Game
@@ -43,7 +45,7 @@ final class GameListDetailViewModel {
 
 // MARK: GameListDetailViewModelInterface
 
-extension GameListViewModel: GameListDetailViewModelInterface {
+extension GameListDetailViewModel: GameListDetailViewModelInterface {
 
     func retrieveGameDetails() {
         // TODO: Will be implemented
