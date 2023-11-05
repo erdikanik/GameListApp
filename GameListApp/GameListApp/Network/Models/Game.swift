@@ -14,7 +14,7 @@ struct Game: Codable {
         case gameId = "id"
         case name
         case imageUrl = "background_image"
-        case genres, metacritic
+        case genres, metacritic, description, website
     }
 
     var gameId: Int

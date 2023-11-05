@@ -10,20 +10,32 @@ import UIKit
 
 extension UIImageView {
 
-    func load(url: String?) {
+    func load(url: String?, imageName: String) {
         DispatchQueue.main.async {
-            self.backgroundColor = .white
+
+            let imageData = FileUtil.getFile(by: imageName)
+
+            guard imageData == nil else {
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: imageData ?? Data())
+                }
+                return
+            }
 
             guard let url = url, let imageUrl = URL(string: url) else {
                 return
             }
 
-            DispatchQueue.global().async { [weak self] in
-                guard let data = try? Data(contentsOf: imageUrl),
-                    let image = UIImage(data: data) else { return }
+            self.backgroundColor = .white
 
-                DispatchQueue.main.async {
-                    self?.image = image
+            DispatchQueue.global().async { [weak self] in
+                if let data = try? Data(contentsOf: imageUrl) {
+                    if let image = UIImage(data: data) {
+                        FileUtil.saveFile(by: imageName, data: data)
+                        DispatchQueue.main.async {
+                            self?.image = image
+                        }
+                    }
                 }
             }
         }

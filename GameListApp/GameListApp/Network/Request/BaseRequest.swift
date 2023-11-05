@@ -22,8 +22,7 @@ class BaseRequest {
     }
 
     private func urlParameters() -> String {
-        let urlMap = "&"
-        var url = urlMap + parameters.map { $0.key + "=" + $0.value + "&" }.joined()
+        var url = parameters.map { $0.key + "=" + $0.value + "&" }.joined()
         url.removeLast()
         return url
     }

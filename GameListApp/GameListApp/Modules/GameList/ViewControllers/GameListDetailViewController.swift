@@ -13,18 +13,37 @@ final class GameListDetailViewController: UIViewController {
     weak var router: GameListRouter?
     var viewModel: GameListDetailViewModelInterface?
 
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var websiteButton: UIButton!
-    @IBOutlet weak var descriptionLabel: UILabel!
-
+    @IBOutlet weak var textView: UITextView!
+    
     private var isFavorited = false
     private var websiteUrl: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel?.stateChangeHandler = { [weak self] state in
+
+            switch state {
+            case .gameDetailsFetched(let game):
+                self?.imageView.load(url: game.imageUrl, imageName: game.imageUrl?.urlComponentsLastItem() ?? "")
+                self?.websiteUrl = game.website
+                DispatchQueue.main.async {
+                    self?.textView.text = game.description
+                    self?.nameLabel.text = game.name
+                }
+            case .error(_):
+                // TODO: Will be implemented
+                break
+            }
+        }
+
         applyDesign()
         updateBarButtonItem()
+
+        viewModel?.retrieveGameDetails()
     }
 
     @objc func favoriteButtonTapped() {
@@ -33,6 +52,10 @@ final class GameListDetailViewController: UIViewController {
     }
     
     @IBAction func websiteButtonTapped(_ sender: Any) {
+        guard let websiteUrl, let url = URL(string: websiteUrl) else {
+            return
+        }
+        UIApplication.shared.open(url)
     }
     
     private func updateBarButtonItem() {

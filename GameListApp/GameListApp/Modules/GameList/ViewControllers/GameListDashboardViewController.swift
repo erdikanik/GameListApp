@@ -24,6 +24,7 @@ final class GameListDashboardViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var games: [Game] = []
+    private var selectedGameIds: [Int] = []
 
     let searchController = UISearchController(searchResultsController: nil)
 
@@ -114,12 +115,18 @@ extension GameListDashboardViewController: UICollectionViewDataSource {
         cell.name = game.name ?? ""
         cell.genres = game.genres?.compactMap { $0.name }.joined(separator: ",") ?? ""
         cell.rating = game.metacritic ?? 0
-        cell.gameImageView.load(url: game.imageUrl)
+        cell.gameImageView.load(url: game.imageUrl, imageName: game.imageUrl?.urlComponentsLastItem() ?? "")
+
+        cell.backgroundColor = selectedGameIds.contains(game.gameId) ? .gray : .clear
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let game = games[indexPath.row]
+        if !selectedGameIds.contains(where: { $0 == game.gameId }) {
+            selectedGameIds.append(game.gameId)
+        }
+        collectionView.cellForItem(at: indexPath)?.backgroundColor = .gray
         gameListRouter?.routeToDetail(gameId: game.gameId)
     }
 }

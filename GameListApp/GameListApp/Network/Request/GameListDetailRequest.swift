@@ -12,6 +12,6 @@ final class GameListDetailRequest: BaseRequest {
     var gameId = 0
 
     override var path: String {
-        NetworkConfiguration.NetworkUrls.detail.getUrl() + "/" + "\(gameId)"
+        NetworkConfiguration.NetworkUrls.detail.getUrl() + "/" + "\(gameId)" + "?"
     }
 }

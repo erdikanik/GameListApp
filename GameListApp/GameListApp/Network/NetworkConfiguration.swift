@@ -24,7 +24,7 @@ enum NetworkConfiguration {
 
             switch self {
             case .dashboard, .search:
-                return baseUrl + "?page_size=10"
+                return baseUrl + "?page_size=10&"
             case .detail:
                 return baseUrl
             }

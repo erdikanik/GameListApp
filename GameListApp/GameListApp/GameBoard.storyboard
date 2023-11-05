@@ -116,37 +116,49 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AEA-c7-fJQ">
                                 <rect key="frame" x="16" y="292.66666666666669" width="361" height="64"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twH-hQ-kaI">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJH-Eq-aDj">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="14"/>
+                                        <rect key="frame" x="0.0" y="50" width="361" height="14"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
                                             <action selector="websiteButtonTapped:" destination="6pE-l7-Aju" eventType="touchUpInside" id="gD1-HR-Jyp"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1p-lO-TSc">
-                                        <rect key="frame" x="0.0" y="14" width="361" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzE-bo-qmT">
+                                <rect key="frame" x="0.0" y="391.66666666666674" width="393" height="426.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VjU-wx-C6O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="VjU-wx-C6O" firstAttribute="trailing" secondItem="VzE-bo-qmT" secondAttribute="trailing" id="GZk-CF-vIq"/>
                             <constraint firstItem="ari-UW-yms" firstAttribute="width" secondItem="jeE-8l-8Ut" secondAttribute="width" id="HCt-7z-Hq3"/>
                             <constraint firstItem="VjU-wx-C6O" firstAttribute="trailing" secondItem="AEA-c7-fJQ" secondAttribute="trailing" constant="16" id="OI8-fY-X1H"/>
+                            <constraint firstItem="VjU-wx-C6O" firstAttribute="bottom" secondItem="VzE-bo-qmT" secondAttribute="bottom" id="RvO-9c-2m7"/>
                             <constraint firstItem="AEA-c7-fJQ" firstAttribute="top" secondItem="ari-UW-yms" secondAttribute="bottom" constant="24" id="fhu-kR-Ur7"/>
+                            <constraint firstItem="VzE-bo-qmT" firstAttribute="top" secondItem="AEA-c7-fJQ" secondAttribute="bottom" constant="35" id="j4R-wi-2fU"/>
                             <constraint firstItem="ari-UW-yms" firstAttribute="top" secondItem="VjU-wx-C6O" secondAttribute="top" id="ubQ-rw-kaQ"/>
+                            <constraint firstItem="VzE-bo-qmT" firstAttribute="leading" secondItem="VjU-wx-C6O" secondAttribute="leading" id="xIS-Z7-NRh"/>
                             <constraint firstItem="AEA-c7-fJQ" firstAttribute="leading" secondItem="VjU-wx-C6O" secondAttribute="leading" constant="16" id="xgw-M2-XKt"/>
                             <constraint firstItem="ari-UW-yms" firstAttribute="centerX" secondItem="VjU-wx-C6O" secondAttribute="centerX" id="zfw-DY-0x4"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="descriptionLabel" destination="I1p-lO-TSc" id="F1R-ZM-5oC"/>
                         <outlet property="imageView" destination="ari-UW-yms" id="IBg-9D-tEU"/>
+                        <outlet property="nameLabel" destination="twH-hQ-kaI" id="03N-NC-PKa"/>
+                        <outlet property="textView" destination="VzE-bo-qmT" id="1xf-R3-xae"/>
                         <outlet property="websiteButton" destination="HJH-Eq-aDj" id="iY6-4I-GNC"/>
                     </connections>
                 </viewController>
@@ -174,6 +186,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
