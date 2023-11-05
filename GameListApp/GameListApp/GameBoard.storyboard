@@ -33,11 +33,35 @@
                     <view key="view" contentMode="scaleToFill" id="Cub-XG-zyn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kT2-M0-VRJ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No favorites in table" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZP-zo-Ohc">
+                                <rect key="frame" x="121.00000000000001" y="425.66666666666669" width="151.33333333333337" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rck-BQ-wRN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sZP-zo-Ohc" firstAttribute="centerY" secondItem="rck-BQ-wRN" secondAttribute="centerY" id="5QX-en-Vq0"/>
+                            <constraint firstItem="rck-BQ-wRN" firstAttribute="trailing" secondItem="kT2-M0-VRJ" secondAttribute="trailing" id="7HN-LK-DjY"/>
+                            <constraint firstItem="kT2-M0-VRJ" firstAttribute="top" secondItem="rck-BQ-wRN" secondAttribute="top" id="E2B-1e-nHn"/>
+                            <constraint firstItem="sZP-zo-Ohc" firstAttribute="centerX" secondItem="rck-BQ-wRN" secondAttribute="centerX" id="FGa-sp-dYm"/>
+                            <constraint firstItem="rck-BQ-wRN" firstAttribute="bottom" secondItem="kT2-M0-VRJ" secondAttribute="bottom" id="Roy-Ya-AS6"/>
+                            <constraint firstItem="kT2-M0-VRJ" firstAttribute="leading" secondItem="rck-BQ-wRN" secondAttribute="leading" id="f1p-Kg-EB9"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="cyB-dH-RjF"/>
                     <navigationItem key="navigationItem" id="BjR-ej-Soa"/>
+                    <connections>
+                        <outlet property="noFavoritesLabel" destination="sZP-zo-Ohc" id="ugN-vr-F2l"/>
+                        <outlet property="tableView" destination="kT2-M0-VRJ" id="Fl8-os-mGF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMk-de-XAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
