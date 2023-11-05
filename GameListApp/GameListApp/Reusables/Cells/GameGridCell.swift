@@ -34,9 +34,24 @@ final class GameGridCell: UICollectionViewCell {
         }
     }
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        applyDesign()
+    }
+
     override func prepareForReuse() {
         super.prepareForReuse()
 
         gameImageView.image = nil
+    }
+}
+
+// MARK: Design
+private extension GameGridCell {
+
+    func applyDesign() {
+        self.layer.borderColor = UIColor.cyan.cgColor
+        self.layer.borderWidth = 2
     }
 }
