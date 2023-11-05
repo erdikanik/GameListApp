@@ -64,6 +64,17 @@ final class GameListDashboardViewController: UIViewController {
     }
 }
 
+// MARK: ScrollView
+
+extension GameListDashboardViewController {
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == collectionView && (collectionView.contentOffset.x >= (collectionView.contentSize.width - collectionView.frame.size.width)) {
+            gameListViewModel?.needNewPage()
+        }
+    }
+}
+
 // MARK: UICollectionViewDataSource
 
 extension GameListDashboardViewController: UICollectionViewDataSource {
