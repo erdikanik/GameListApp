@@ -30,6 +30,7 @@
 		87C2C73C2AF6D41800EB9628 /* UIViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C73B2AF6D41800EB9628 /* UIViewAdditions.swift */; };
 		87C2C7402AF6D50700EB9628 /* GameGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C73F2AF6D50700EB9628 /* GameGridCell.swift */; };
 		87C2C7422AF6D5A200EB9628 /* GameGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87C2C7412AF6D5A200EB9628 /* GameGridCell.xib */; };
+		87C2C7442AF6E60200EB9628 /* UIImageAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7432AF6E60200EB9628 /* UIImageAdditions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		87C2C73B2AF6D41800EB9628 /* UIViewAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAdditions.swift; sourceTree = "<group>"; };
 		87C2C73F2AF6D50700EB9628 /* GameGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridCell.swift; sourceTree = "<group>"; };
 		87C2C7412AF6D5A200EB9628 /* GameGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameGridCell.xib; sourceTree = "<group>"; };
+		87C2C7432AF6E60200EB9628 /* UIImageAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageAdditions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				87C2C73B2AF6D41800EB9628 /* UIViewAdditions.swift */,
+				87C2C7432AF6E60200EB9628 /* UIImageAdditions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				8704BC792AF65BCF0055F8FC /* ViewConstants.swift in Sources */,
 				8704BC7F2AF663200055F8FC /* GameListDashboardViewController.swift in Sources */,
 				87C2C7252AF6855300EB9628 /* NetworkConfiguration.swift in Sources */,
+				87C2C7442AF6E60200EB9628 /* UIImageAdditions.swift in Sources */,
 				87C2C7362AF69AEA00EB9628 /* GameListResponse.swift in Sources */,
 				87C2C71F2AF6678E00EB9628 /* GameListTabbarController.swift in Sources */,
 				87C2C7312AF696E700EB9628 /* Game.swift in Sources */,

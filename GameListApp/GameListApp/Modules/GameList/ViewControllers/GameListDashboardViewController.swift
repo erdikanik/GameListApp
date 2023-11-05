@@ -88,6 +88,7 @@ extension GameListDashboardViewController: UICollectionViewDataSource {
         cell.name = game.name ?? ""
         cell.genres = game.genres?.compactMap { $0.name }.joined(separator: ",") ?? ""
         cell.rating = game.metacritic
+        cell.gameImageView.load(url: game.imageUrl)
         cell.backgroundColor = .red
         return cell
     }
