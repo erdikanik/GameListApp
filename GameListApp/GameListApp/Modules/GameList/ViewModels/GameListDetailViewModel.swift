@@ -26,7 +26,7 @@ final class GameListDetailViewModel {
 
     enum State {
 
-        case gameDetailsFetched(Game)
+        case gameDetailsFetched(Game, Bool)
         case error(String)
     }
 
@@ -58,7 +58,9 @@ extension GameListDetailViewModel: GameListDetailViewModelInterface {
             case .error(let error):
                 self?.stateChangeHandler?(.error(error.localizedDescription))
             case .success(let game):
-                self?.stateChangeHandler?(.gameDetailsFetched(game))
+                self?.fetchedGame = game
+                let isExist = self?.dataSource.contains(gameId: game.gameId) ?? false
+                self?.stateChangeHandler?(.gameDetailsFetched(game, isExist))
             }
         }
     }

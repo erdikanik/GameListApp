@@ -27,12 +27,14 @@ final class GameListDetailViewController: UIViewController {
         viewModel?.stateChangeHandler = { [weak self] state in
 
             switch state {
-            case .gameDetailsFetched(let game):
+            case .gameDetailsFetched(let game, let favorited):
                 self?.imageView.load(url: game.imageUrl, imageName: game.imageUrl?.urlComponentsLastItem() ?? "")
                 self?.websiteUrl = game.website
                 DispatchQueue.main.async {
                     self?.textView.text = game.description
                     self?.nameLabel.text = game.name
+                    self?.isFavorited = favorited
+                    self?.updateBarButtonItem()
                 }
             case .error(_):
                 // TODO: Will be implemented

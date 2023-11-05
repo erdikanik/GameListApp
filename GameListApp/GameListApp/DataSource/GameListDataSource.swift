@@ -17,6 +17,10 @@ protocol GameListDataSourceInterface {
     /// - Returns: Game object array
     func favorites() -> [Game]
 
+    /// Check game object is exist
+    /// - Returns: true if it is find
+    func contains(gameId: Int) -> Bool
+
     /// Removes from favorites
     func remove(gameId: Int)
 }
@@ -38,7 +42,15 @@ extension GameListDataSource: GameListDataSourceInterface {
             }
         }
     }
-    
+
+    func contains(gameId: Int) -> Bool {
+        guard let favoriteGames = GameListDataSource.favoriteGames else {
+            return false
+        }
+
+        return favoriteGames.first(where: { $0.gameId == gameId }) != nil
+    }
+
     func favorites() -> [Game] {
         return GameListDataSource.favoriteGames ?? []
     }
