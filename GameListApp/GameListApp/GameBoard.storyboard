@@ -29,7 +29,7 @@
         <!--Item 2-->
         <scene sceneID="Pon-w1-W0I">
             <objects>
-                <viewController id="oKD-4d-1Xl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gameListFavoriteViewController" id="oKD-4d-1Xl" customClass="GameListFavoriteViewController" customModule="GameListApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cub-XG-zyn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,7 +132,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzE-bo-qmT">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VzE-bo-qmT">
                                 <rect key="frame" x="0.0" y="391.66666666666674" width="393" height="426.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>

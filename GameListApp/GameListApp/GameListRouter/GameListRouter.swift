@@ -40,6 +40,16 @@ final class GameListRouter: GameListRoutable {
         
         let viewModel = GameListViewModel(networkManager: networkManager)
         gameListDashboardViewController.gameListViewModel = viewModel
+
+        guard let navigationController = tabbarController.viewControllers?[1] as? UINavigationController,
+              let gameListFavoriteViewController =
+                navigationController.topViewController as? GameListFavoriteViewController else {
+
+            return
+        }
+
+        let gameListFavoriteViewModel = GameListFavoriteViewModel(dataSource: dataSource)
+        gameListFavoriteViewController.viewModel = gameListFavoriteViewModel
     }
 
     func routeToDetail(gameId: Int) {

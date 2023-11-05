@@ -8,6 +8,13 @@
 import Foundation
 import UIKit
 
-final class GameListFavoriteViewController {
-    
+final class GameListFavoriteViewController: UIViewController {
+
+    var viewModel: GameListFavoriteViewModelInterface?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // TODO: Will be implementeds
+    }
 }

@@ -79,7 +79,6 @@ final class GameListDetailViewController: UIViewController {
 private extension GameListDetailViewController {
 
     func applyDesign() {
-
         websiteButton.setTitle(NSLocalizedString("Open website", comment: ""), for: .normal)
     }
 }

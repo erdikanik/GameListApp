@@ -23,5 +23,6 @@ enum ViewConstants {
 
         case gameListDashboardViewController
         case gameListDetailViewController
+        case gameListFavoriteViewController
     }
 }
