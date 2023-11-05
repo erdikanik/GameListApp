@@ -106,9 +106,49 @@
                     <view key="view" contentMode="scaleToFill" id="jeE-8l-8Ut">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ari-UW-yms">
+                                <rect key="frame" x="0.0" y="58.999999999999986" width="393" height="209.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ari-UW-yms" secondAttribute="height" multiplier="15:8" id="ksX-6H-FGX"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AEA-c7-fJQ">
+                                <rect key="frame" x="16" y="292.66666666666669" width="361" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJH-Eq-aDj">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="14"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="websiteButtonTapped:" destination="6pE-l7-Aju" eventType="touchUpInside" id="gD1-HR-Jyp"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1p-lO-TSc">
+                                        <rect key="frame" x="0.0" y="14" width="361" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="VjU-wx-C6O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ari-UW-yms" firstAttribute="width" secondItem="jeE-8l-8Ut" secondAttribute="width" id="HCt-7z-Hq3"/>
+                            <constraint firstItem="VjU-wx-C6O" firstAttribute="trailing" secondItem="AEA-c7-fJQ" secondAttribute="trailing" constant="16" id="OI8-fY-X1H"/>
+                            <constraint firstItem="AEA-c7-fJQ" firstAttribute="top" secondItem="ari-UW-yms" secondAttribute="bottom" constant="24" id="fhu-kR-Ur7"/>
+                            <constraint firstItem="ari-UW-yms" firstAttribute="top" secondItem="VjU-wx-C6O" secondAttribute="top" id="ubQ-rw-kaQ"/>
+                            <constraint firstItem="AEA-c7-fJQ" firstAttribute="leading" secondItem="VjU-wx-C6O" secondAttribute="leading" constant="16" id="xgw-M2-XKt"/>
+                            <constraint firstItem="ari-UW-yms" firstAttribute="centerX" secondItem="VjU-wx-C6O" secondAttribute="centerX" id="zfw-DY-0x4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="I1p-lO-TSc" id="F1R-ZM-5oC"/>
+                        <outlet property="imageView" destination="ari-UW-yms" id="IBg-9D-tEU"/>
+                        <outlet property="websiteButton" destination="HJH-Eq-aDj" id="iY6-4I-GNC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4s-qn-vMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
