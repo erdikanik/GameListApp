@@ -113,7 +113,7 @@ extension GameListDashboardViewController: UICollectionViewDataSource {
 
         cell.name = game.name ?? ""
         cell.genres = game.genres?.compactMap { $0.name }.joined(separator: ",") ?? ""
-        cell.rating = game.metacritic
+        cell.rating = game.metacritic ?? 0
         cell.gameImageView.load(url: game.imageUrl)
         return cell
     }
@@ -155,9 +155,10 @@ extension GameListDashboardViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
         if searchBar.text == nil || searchBar.text?.count == 0 {
-
+            gameListViewModel?.fetchInitialGames()
         } else {
             if let text = searchBar.text {
+                gameListViewModel?.searchGame(parameterKey: text)
             }
         }
     }

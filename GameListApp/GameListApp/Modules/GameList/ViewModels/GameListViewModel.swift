@@ -17,6 +17,10 @@ protocol GameListViewModelInterface {
 
     /// Request to increase page count
     func needNewPage()
+
+    /// Search by key
+    /// - Parameter parameterKey: Search keyword
+    func searchGame(parameterKey: String)
 }
 
 final class GameListViewModel {
@@ -34,7 +38,10 @@ final class GameListViewModel {
     private var isLastCallHasNext = false
     private var isLastCallProcessing = false
     private var fetchedGameModels: [Game] = []
-
+    private var requestedSearchArray: [String] = []
+    private var timer: Timer?
+    private var currentUrlSessionTask: URLSessionTask?
+    private var lastSearchKey: String?
     init(networkManager: NetworkManagerProtocol) {
         self.networkManager = networkManager
     }
@@ -45,26 +52,34 @@ final class GameListViewModel {
 extension GameListViewModel: GameListViewModelInterface {
 
     func fetchInitialGames() {
-        fetchGamesByPage()
+        currentPage = 1
+        fetchedGameModels.removeAll()
+        lastSearchKey = nil
+        fetchGamesByPage(searchKey: nil)
     }
 
     func needNewPage() {
         if (isLastCallHasNext && !isLastCallProcessing) {
             currentPage += 1
             isLastCallProcessing = true
-            fetchGamesByPage()
+            fetchGamesByPage(searchKey: lastSearchKey)
         }
+    }
+
+    func searchGame(parameterKey: String) {
+        searchGames(searchKey: parameterKey)
     }
 }
 
 // MARK: Private methods
 
-extension GameListViewModel {
+private extension GameListViewModel {
 
-    private func fetchGamesByPage() {
+    func fetchGamesByPage(searchKey: String?) {
         let request = GameListRequest()
         request.page = currentPage
-        networkManager.performRequest(request: request) { [weak self] (result: Result<GameListResponse>) in
+        request.searchKey = searchKey
+        currentUrlSessionTask = networkManager.performRequest(request: request) { [weak self] (result: Result<GameListResponse>) in
             self?.isLastCallProcessing = false
             switch result {
             case .error(let error):
@@ -75,6 +90,30 @@ extension GameListViewModel {
                 }
                 self?.fetchedGameModels.append(contentsOf: response.results ?? [])
                 self?.stateChangeHandler?(.initialGamesFetched(self?.fetchedGameModels ?? []))
+            }
+        }
+    }
+
+    func searchGames(searchKey: String) {
+        guard !searchKey.isEmpty else { return }
+        requestedSearchArray.append(searchKey)
+
+        if self.timer == nil {
+            self.timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] timer in
+                guard !(self?.requestedSearchArray.isEmpty ?? false) else {
+                    self?.timer?.invalidate()
+                    self?.timer = nil
+                    return
+                }
+
+                self?.currentUrlSessionTask?.cancel()
+                if let lastKey = self?.requestedSearchArray.last {
+                    self?.fetchedGameModels.removeAll()
+                    self?.currentPage = 1
+                    self?.lastSearchKey = lastKey
+                    self?.fetchGamesByPage(searchKey: lastKey)
+                }
+                self?.requestedSearchArray.removeAll()
             }
         }
     }

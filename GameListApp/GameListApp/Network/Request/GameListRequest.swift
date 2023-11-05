@@ -12,9 +12,11 @@ final class GameListRequest: BaseRequest {
     private enum Constant {
 
         static let page = "page"
+        static let searchKey = "search"
     }
 
     var page = 1
+    var searchKey: String?
 
     override var path: String {
         NetworkConfiguration.NetworkUrls.dashboard.getUrl()
@@ -24,6 +26,10 @@ final class GameListRequest: BaseRequest {
         var parameters = [
             Constant.page: String(page)
         ]
+
+        if let searchKey = searchKey {
+            parameters[Constant.searchKey] = searchKey
+        }
         super.parameters.forEach { parameters[$0] = $1 }
         return parameters
     }

@@ -21,5 +21,5 @@ struct Game: Decodable {
     var name: String?
     var imageUrl: String?
     var genres: [Genre]?
-    var metacritic: Int
+    var metacritic: Int?
 }
