@@ -85,7 +85,9 @@ private extension GameListDashboardViewController {
 extension GameListDashboardViewController {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView == collectionView && (collectionView.contentOffset.x >= (collectionView.contentSize.width - collectionView.frame.size.width)) {
+        if scrollView == collectionView &&
+            (collectionView.contentOffset.y >=
+             (collectionView.contentSize.height - collectionView.frame.size.height)) {
             gameListViewModel?.needNewPage()
         }
     }
