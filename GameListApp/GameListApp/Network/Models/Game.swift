@@ -20,6 +20,7 @@ struct Game: Codable {
     var gameId: Int
     var name: String?
     var imageUrl: String?
+    var description: String?
     var genres: [Genre]?
     var metacritic: Int?
 }
