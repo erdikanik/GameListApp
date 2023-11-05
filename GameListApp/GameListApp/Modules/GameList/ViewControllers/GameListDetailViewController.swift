@@ -49,6 +49,12 @@ final class GameListDetailViewController: UIViewController {
     @objc func favoriteButtonTapped() {
         isFavorited = !isFavorited
         updateBarButtonItem()
+
+        if (isFavorited) {
+            viewModel?.addToFavorites()
+        } else {
+            viewModel?.removeFromFavorites()
+        }
     }
     
     @IBAction func websiteButtonTapped(_ sender: Any) {
