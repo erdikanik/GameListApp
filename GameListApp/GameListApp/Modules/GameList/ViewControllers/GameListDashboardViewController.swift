@@ -120,7 +120,7 @@ extension GameListDashboardViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let game = games[indexPath.row]
-        gameListRouter?.routeToDetail(game: game)
+        gameListRouter?.routeToDetail(gameId: game.gameId)
     }
 }
 

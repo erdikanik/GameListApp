@@ -15,8 +15,8 @@ protocol GameListRoutable: AnyObject {
     func startRouting()
 
     /// Routes to detail
-    /// - Parameter game: Game object to show details
-    func routeToDetail(game: Game)
+    /// - Parameter game: Game id to show details
+    func routeToDetail(gameId: Int)
 }
 
 final class GameListRouter: GameListRoutable {
@@ -42,13 +42,13 @@ final class GameListRouter: GameListRoutable {
         gameListDashboardViewController.gameListViewModel = viewModel
     }
 
-    func routeToDetail(game: Game) {
+    func routeToDetail(gameId: Int) {
         let storyboard = UIStoryboard(name: ViewConstants.StoryboardNames.gameBoard.rawValue, bundle: nil)
         guard let gameListDetailViewController = storyboard.instantiateViewController(
             withIdentifier: ViewConstants.ViewControllers.gameListDetailViewController.rawValue) as? GameListDetailViewController else { return }
 
         let gameListDetailViewModel = GameListDetailViewModel(
-            selectedGame: game,
+            selectedGameId: gameId,
             networkManager: networkManager,
             dataSource: dataSource)
 

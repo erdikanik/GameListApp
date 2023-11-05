@@ -17,8 +17,8 @@ protocol GameListDataSourceInterface {
     /// - Returns: Game object array
     func favorites() -> [Game]
 
-    /// Removes all favorites
-    func removeAll()
+    /// Removes from favorites
+    func remove(gameId: Int)
 }
 
 final class GameListDataSource {
@@ -43,8 +43,8 @@ extension GameListDataSource: GameListDataSourceInterface {
         return GameListDataSource.favoriteGames ?? []
     }
     
-    func removeAll() {
-        GameListDataSource.favoriteGames?.removeAll()
+    func remove(gameId: Int) {
+        GameListDataSource.favoriteGames?.removeAll(where: { $0.gameId == gameId })
     }
 
     @propertyWrapper

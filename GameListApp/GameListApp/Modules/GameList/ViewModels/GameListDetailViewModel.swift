@@ -34,10 +34,12 @@ final class GameListDetailViewModel {
 
     private let networkManager: NetworkManagerProtocol
     private let dataSource: GameListDataSource
-    private let selectedGame: Game
+    private let selectedGameId: Int
 
-    init(selectedGame: Game, networkManager: NetworkManagerProtocol, dataSource: GameListDataSource) {
-        self.selectedGame = selectedGame
+    private var fetchedGame: Game?
+
+    init(selectedGameId: Int, networkManager: NetworkManagerProtocol, dataSource: GameListDataSource) {
+        self.selectedGameId = selectedGameId
         self.networkManager = networkManager
         self.dataSource = dataSource
     }
@@ -48,14 +50,26 @@ final class GameListDetailViewModel {
 extension GameListDetailViewModel: GameListDetailViewModelInterface {
 
     func retrieveGameDetails() {
-        // TODO: Will be implemented
+        let request = GameListDetailRequest()
+        request.gameId = selectedGameId
+        
+        networkManager.performRequest(request: request) { [weak self] (result: Result<Game>) in
+            switch result {
+            case .error(let error):
+                self?.stateChangeHandler?(.error(error.localizedDescription))
+            case .success(let game):
+                self?.stateChangeHandler?(.gameDetailsFetched(game))
+            }
+        }
     }
     
     func addToFavorites() {
-        // TODO: Will be implemented
+        if let game = fetchedGame {
+            dataSource.addToFavorites(game: game)
+        }
     }
     
     func removeFromFavorites() {
-        // TODO: Will be implemented
+        dataSource.remove(gameId: selectedGameId)
     }
 }
