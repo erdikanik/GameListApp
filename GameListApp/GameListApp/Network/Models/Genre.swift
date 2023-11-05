@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Genre: Decodable {
+struct Genre: Codable {
 
     private enum CodingKeys: String, CodingKey {
 

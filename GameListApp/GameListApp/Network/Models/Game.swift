@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Game: Decodable {
+struct Game: Codable {
 
     private enum CodingKeys: String, CodingKey {
 

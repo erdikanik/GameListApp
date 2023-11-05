@@ -33,6 +33,7 @@
 		87C2C7442AF6E60200EB9628 /* UIImageAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7432AF6E60200EB9628 /* UIImageAdditions.swift */; };
 		87C2C7462AF7935600EB9628 /* GameListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7452AF7935500EB9628 /* GameListDetailViewController.swift */; };
 		87C2C7482AF7939100EB9628 /* GameListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7472AF7939100EB9628 /* GameListDetailViewModel.swift */; };
+		87C2C74B2AF7964D00EB9628 /* GameListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C74A2AF7964D00EB9628 /* GameListDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		87C2C7432AF6E60200EB9628 /* UIImageAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageAdditions.swift; sourceTree = "<group>"; };
 		87C2C7452AF7935500EB9628 /* GameListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListDetailViewController.swift; sourceTree = "<group>"; };
 		87C2C7472AF7939100EB9628 /* GameListDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListDetailViewModel.swift; sourceTree = "<group>"; };
+		87C2C74A2AF7964D00EB9628 /* GameListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		8704BC402AF6564C0055F8FC /* GameListApp */ = {
 			isa = PBXGroup;
 			children = (
+				87C2C7492AF7962A00EB9628 /* DataSource */,
 				87C2C73D2AF6D4EA00EB9628 /* Reusables */,
 				87C2C73A2AF6D40B00EB9628 /* Extensions */,
 				87C2C7232AF67ED600EB9628 /* Network */,
@@ -282,6 +285,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		87C2C7492AF7962A00EB9628 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				87C2C74A2AF7964D00EB9628 /* GameListDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -422,6 +433,7 @@
 				87C2C7252AF6855300EB9628 /* NetworkConfiguration.swift in Sources */,
 				87C2C7442AF6E60200EB9628 /* UIImageAdditions.swift in Sources */,
 				87C2C7462AF7935600EB9628 /* GameListDetailViewController.swift in Sources */,
+				87C2C74B2AF7964D00EB9628 /* GameListDataSource.swift in Sources */,
 				87C2C7362AF69AEA00EB9628 /* GameListResponse.swift in Sources */,
 				87C2C71F2AF6678E00EB9628 /* GameListTabbarController.swift in Sources */,
 				87C2C7312AF696E700EB9628 /* Game.swift in Sources */,
