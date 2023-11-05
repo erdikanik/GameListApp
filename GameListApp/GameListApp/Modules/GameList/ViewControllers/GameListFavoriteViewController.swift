@@ -37,11 +37,15 @@ final class GameListFavoriteViewController: UIViewController {
                         self?.tableView.reloadData()
                     }
                     break
-                case .removed(let result):
-                    break
                 }
             }
         }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        viewModel?.favoriteList()
     }
 }
 
@@ -62,5 +66,25 @@ extension GameListFavoriteViewController: UITableViewDataSource {
         }
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let alertController = AlertView.showAlertView(
+                message: NSLocalizedString("Are you sure?", comment: ""),
+                okButton: "Yes",
+                cancelButton: "Cancel") { delete in
+                    if delete {
+                        let game = self.favorites[indexPath.row]
+                        self.viewModel?.removeFromFavorites(gameId: game.gameId)
+                    }
+            }
+
+            present(alertController, animated: true)
+        }
     }
 }

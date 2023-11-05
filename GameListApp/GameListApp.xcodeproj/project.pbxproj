@@ -41,6 +41,7 @@
 		87C2C7562AF7E2C200EB9628 /* GameListFavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7552AF7E2C200EB9628 /* GameListFavoriteViewModel.swift */; };
 		87C2C7582AF7EC4F00EB9628 /* GameFavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7572AF7EC4F00EB9628 /* GameFavoriteCell.swift */; };
 		87C2C75A2AF7EC5C00EB9628 /* GameFavoriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87C2C7592AF7EC5C00EB9628 /* GameFavoriteCell.xib */; };
+		87C2C75E2AF7FCA800EB9628 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C75D2AF7FCA800EB9628 /* AlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		87C2C7552AF7E2C200EB9628 /* GameListFavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListFavoriteViewModel.swift; sourceTree = "<group>"; };
 		87C2C7572AF7EC4F00EB9628 /* GameFavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFavoriteCell.swift; sourceTree = "<group>"; };
 		87C2C7592AF7EC5C00EB9628 /* GameFavoriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameFavoriteCell.xib; sourceTree = "<group>"; };
+		87C2C75D2AF7FCA800EB9628 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				87C2C74F2AF7DAA600EB9628 /* FileUtil.swift */,
+				87C2C75D2AF7FCA800EB9628 /* AlertView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 			files = (
 				87C2C72D2AF6907300EB9628 /* BaseRequest.swift in Sources */,
 				87C2C72F2AF6951F00EB9628 /* GameListRequest.swift in Sources */,
+				87C2C75E2AF7FCA800EB9628 /* AlertView.swift in Sources */,
 				87C2C72B2AF68C5000EB9628 /* NetworkManager.swift in Sources */,
 				87C2C7502AF7DAA600EB9628 /* FileUtil.swift in Sources */,
 				87C2C7562AF7E2C200EB9628 /* GameListFavoriteViewModel.swift in Sources */,

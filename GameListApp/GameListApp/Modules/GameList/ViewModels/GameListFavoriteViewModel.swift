@@ -25,7 +25,6 @@ final class GameListFavoriteViewModel {
     enum State {
 
         case favorites([Game])
-        case removed(String)
     }
 
     var stateChangeHandler: ((State) -> Void)?
@@ -46,6 +45,7 @@ extension GameListFavoriteViewModel: GameListFavoriteViewModelInterface {
 
     func removeFromFavorites(gameId: Int) {
         dataSource.remove(gameId: gameId)
-        stateChangeHandler?(.removed("\(gameId) is removed"))
+        let favorites = dataSource.favorites()
+        stateChangeHandler?(.favorites(favorites))
     }
 }
