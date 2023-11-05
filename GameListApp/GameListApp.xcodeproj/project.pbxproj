@@ -11,7 +11,6 @@
 		8704BC442AF6564C0055F8FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8704BC432AF6564C0055F8FC /* SceneDelegate.swift */; };
 		8704BC4B2AF6564D0055F8FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8704BC4A2AF6564D0055F8FC /* Assets.xcassets */; };
 		8704BC4E2AF6564D0055F8FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8704BC4C2AF6564D0055F8FC /* LaunchScreen.storyboard */; };
-		8704BC592AF6564D0055F8FC /* GameListAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8704BC582AF6564D0055F8FC /* GameListAppTests.swift */; };
 		8704BC632AF6564D0055F8FC /* GameListAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8704BC622AF6564D0055F8FC /* GameListAppUITests.swift */; };
 		8704BC652AF6564D0055F8FC /* GameListAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8704BC642AF6564D0055F8FC /* GameListAppUITestsLaunchTests.swift */; };
 		8704BC732AF65A800055F8FC /* GameBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8704BC722AF65A800055F8FC /* GameBoard.storyboard */; };
@@ -42,6 +41,7 @@
 		87C2C7582AF7EC4F00EB9628 /* GameFavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7572AF7EC4F00EB9628 /* GameFavoriteCell.swift */; };
 		87C2C75A2AF7EC5C00EB9628 /* GameFavoriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87C2C7592AF7EC5C00EB9628 /* GameFavoriteCell.xib */; };
 		87C2C75E2AF7FCA800EB9628 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C75D2AF7FCA800EB9628 /* AlertView.swift */; };
+		87C2C7632AF80DD800EB9628 /* GameListFavoriteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2C7622AF80DD800EB9628 /* GameListFavoriteViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,6 @@
 		8704BC4D2AF6564D0055F8FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8704BC4F2AF6564D0055F8FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8704BC542AF6564D0055F8FC /* GameListAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameListAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8704BC582AF6564D0055F8FC /* GameListAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListAppTests.swift; sourceTree = "<group>"; };
 		8704BC5E2AF6564D0055F8FC /* GameListAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameListAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8704BC622AF6564D0055F8FC /* GameListAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListAppUITests.swift; sourceTree = "<group>"; };
 		8704BC642AF6564D0055F8FC /* GameListAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -101,6 +100,8 @@
 		87C2C7572AF7EC4F00EB9628 /* GameFavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFavoriteCell.swift; sourceTree = "<group>"; };
 		87C2C7592AF7EC5C00EB9628 /* GameFavoriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameFavoriteCell.xib; sourceTree = "<group>"; };
 		87C2C75D2AF7FCA800EB9628 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		87C2C75F2AF80DBD00EB9628 /* GameListAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameListAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		87C2C7622AF80DD800EB9628 /* GameListFavoriteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListFavoriteViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +173,8 @@
 		8704BC572AF6564D0055F8FC /* GameListAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				8704BC582AF6564D0055F8FC /* GameListAppTests.swift */,
+				87C2C75F2AF80DBD00EB9628 /* GameListAppTests-Bridging-Header.h */,
+				87C2C7622AF80DD800EB9628 /* GameListFavoriteViewModelTests.swift */,
 			);
 			path = GameListAppTests;
 			sourceTree = "<group>";
@@ -396,6 +398,7 @@
 					};
 					8704BC532AF6564D0055F8FC = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 						TestTargetID = 8704BC3D2AF6564C0055F8FC;
 					};
 					8704BC5D2AF6564D0055F8FC = {
@@ -492,7 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8704BC592AF6564D0055F8FC /* GameListAppTests.swift in Sources */,
+				87C2C7632AF80DD800EB9628 /* GameListFavoriteViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,6 +717,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -722,6 +726,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.game.GameListAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "GameListAppTests/GameListAppTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameListApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GameListApp";
@@ -733,6 +739,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -741,6 +748,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.game.GameListAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "GameListAppTests/GameListAppTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameListApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GameListApp";
